@@ -58,6 +58,11 @@ nav {
     font-size: 11pt;
 }
 
+.item {
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+
 .remove {
     margin-left: 10px;
     color: red;

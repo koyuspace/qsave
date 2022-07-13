@@ -5,7 +5,7 @@ function onDeviceReady() {
         let elements = localStorage.getItem("titles").split("$$$");
         elements.forEach((el) => {
             if (el !== "") {
-                codes += "<p><a class=\"btn\" href=\"read.html?title="+Base64.encode(el).replaceAll("=", "")+"\">"+el+"</a> <i class=\"fa fa-times remove\" aria-hidden=\"true\" item=\""+Base64.encode(el).replaceAll("=", "")+"\"></i></p>";
+                codes += "<p class=\"item\"><a class=\"btn\" href=\"read.html?title="+Base64.encode(el).replaceAll("=", "")+"\">"+el+"</a> <i class=\"fa fa-times remove\" aria-hidden=\"true\" item=\""+Base64.encode(el).replaceAll("=", "")+"\"></i></p>";
             }
         });
         codes += "</span>"
