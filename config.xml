@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.Sommerlichter.qsave" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>QSave</name>
+    <description>Save websites to your device using a QR code</description>
+    <author email="support@koyu.space" href="https://koyu.space">
+        koyu.space
+    </author>
+    <content src="index.html" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <preference name="StatusBarBackgroundColor" value="#fae805" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarStyle" value="default" />
+    <icon src="www/img/logo.png" />
+    <platform name="android">
+        <resource-file src="res/values/colors.xml" target="/app/src/main/res/values/colors.xml" />
+        <icon background="@color/background" density="mdpi" foreground="res/mipmap-mdpi/ic_launcher_adaptive_fore.png" />
+        <icon background="@color/background" density="hdpi" foreground="res/mipmap-hdpi/ic_launcher_adaptive_fore.png" />
+        <icon background="@color/background" density="xhdpi" foreground="res/mipmap-xhdpi/ic_launcher_adaptive_fore.png" />
+        <icon background="@color/background" density="xxhdpi" foreground="res/mipmap-xxhdpi/ic_launcher_adaptive_fore.png" />
+        <icon background="@color/background" density="xxxhdpi" foreground="res/mipmap-xxxhdpi/ic_launcher_adaptive_fore.png" />
+    </platform>
+</widget>
