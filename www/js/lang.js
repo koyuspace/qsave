@@ -1,3 +1,6 @@
+var pageRemoval = "Do you really want to remove this page?"
+var qrPrompt = "Place a barcode inside the scan area";
+
 function onDeviceReady2() {
     var userLang = navigator.language || navigator.userLanguage; 
     userLang = userLang.split("-")[0];
@@ -10,6 +13,8 @@ function onDeviceReady2() {
         $("#about").html("Über QSave");
         $("#what").html("Diese App erlaubt es dir einen QR-Code zu scannen und die daraus entstandene Seite zu speichern.");
         $("#return").html("Zurück zur Übersicht");
+        pageRemoval = "Möchtest du die Seite wikrlich entfernen?";
+        qrPrompt = "Halte dein Gerät an einen QR-Code";
     }
 }
 

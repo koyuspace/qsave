@@ -21,7 +21,7 @@ function onDeviceReady() {
     $(".remove").click(function() {
         let item = $(this).attr("item");
         try {
-            if (confirm("Do you really want to remove this page?")) {
+            if (confirm(pageRemoval)) {
                 let elements = localStorage.getItem("titles").split("$$$");
                 var index = elements.indexOf(Base64.decode(item));
                 if (index !== -1) {
@@ -75,6 +75,7 @@ function onDeviceReady() {
                 showTorchButton : true, // iOS and Android
                 torchOn: false, // Android, launch with the torch switched on (if available)
                 saveHistory: false, // Android, save scan history (default false)
+                prompt : qrPrompt, // Android
                 resultDisplayDuration: 500, // Android, display scanned text for X ms. 0 suppresses it entirely, default 1500
                 formats : "QR_CODE", // default: all but PDF_417 and RSS_EXPANDED
                 orientation : "portrait", // Android only (portrait|landscape), default unset so it rotates with the device
