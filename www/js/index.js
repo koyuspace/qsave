@@ -3,13 +3,10 @@ function onDeviceReady() {
     try {
         let codes = "<span>";
         let elements = localStorage.getItem("titles").split("$$$");
-        var index = elements.indexOf("");
-        if (index !== -1) {
-            elements.splice(index, 1);
-        }
-        elements.pop();
         elements.forEach((el) => {
-            codes += "<p><a class=\"btn\" href=\"read.html?title="+Base64.encode(el).replaceAll("=", "")+"\">"+el+"</a> <i class=\"fa fa-times remove\" aria-hidden=\"true\" item=\""+Base64.encode(el).replaceAll("=", "")+"\"></i></p>";
+            if (el !== "") {
+                codes += "<p><a class=\"btn\" href=\"read.html?title="+Base64.encode(el).replaceAll("=", "")+"\">"+el+"</a> <i class=\"fa fa-times remove\" aria-hidden=\"true\" item=\""+Base64.encode(el).replaceAll("=", "")+"\"></i></p>";
+            }
         });
         codes += "</span>"
         if (codes !== "<span></span>") {
@@ -27,7 +24,7 @@ function onDeviceReady() {
                 if (index !== -1) {
                     elements.splice(index, 1);
                 }
-                localStorage.setItem("titles", elements);
+                localStorage.setItem("titles", elements.join("$$$"));
                 location.reload();
             }
         } catch (e) {
